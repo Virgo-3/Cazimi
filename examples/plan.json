@@ -1,0 +1,35 @@
+{
+  "goal": "Save an approved decision record",
+  "requirements": [
+    {
+      "id": "success",
+      "text": "Establish that the requested result is a local approved decision record with an explicit success criterion.",
+      "depends_on": [],
+      "evidence": []
+    },
+    {
+      "id": "risks",
+      "text": "Identify and accept the consequences of the local export; illustrative economics are not verified real-world payoffs.",
+      "depends_on": [],
+      "evidence": []
+    },
+    {
+      "id": "rollback",
+      "text": "Establish that the unchanged local JSON export can be removed using its receipt, while preserving the audit history and consumed credits.",
+      "depends_on": ["success"],
+      "evidence": []
+    }
+  ],
+  "economics": {
+    "probability": 0.6,
+    "gain": 100,
+    "loss": 120,
+    "action_cost": 0,
+    "observation_cost": 5,
+    "delay_cost": 2,
+    "signal_accuracy": 0.8,
+    "observation_available": true
+  },
+  "rollback": "Use /receipts to find the local export, then /undo RECEIPT to remove its unchanged JSON file; preserve audit history and consumed credits.",
+  "status": "provisional"
+}

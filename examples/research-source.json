@@ -1,0 +1,11 @@
+{
+  "id": "illustrative-local",
+  "kind": "json",
+  "location": "research-feed.json",
+  "category": "internal_research",
+  "quality": "user",
+  "ticker": "DEMO",
+  "timeout": 15,
+  "request_cost": 0,
+  "header_env": {}
+}

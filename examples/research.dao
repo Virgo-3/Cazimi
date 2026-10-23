@@ -1,0 +1,12 @@
+# Run from the repository root. These are fictional fixed-date user assertions.
+# The script makes no model requests and starts no polling schedule.
+/source-add "examples/research-source.json"
+/watch-add "examples/research-watch.json"
+/run
+/reports illustrative-thesis
+/evidence DEMO
+/alerts
+/verify
+# After reviewing your assumptions, /approve illustrative-thesis approves rules.
+# User provenance still prevents a decision-grade ready conclusion.
+# Update old dates with actual source observations; do not relabel old facts.

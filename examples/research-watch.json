@@ -1,0 +1,59 @@
+{
+  "id": "illustrative-thesis",
+  "ticker": "DEMO",
+  "thesis": "Fictional example only: growth and margins must support the supplied valuation. These are synthetic user assertions, not investment research on a real issuer.",
+  "horizon_days": 365,
+  "quote_max_age_seconds": 86400,
+  "valuation_max_age_seconds": 2592000,
+  "max_observation_age_seconds": 7776000,
+  "pillars": [
+    {
+      "id": "growth",
+      "claim": "Illustrative quarterly revenue growth must remain at least 10%.",
+      "metric": "revenue_growth",
+      "unit": "ratio",
+      "period": "2026Q3",
+      "source_ids": ["illustrative-local"],
+      "core": true,
+      "confirm": {"op": "gte", "value": 0.1},
+      "warning": {"op": "lt", "value": 0.08},
+      "kill": {"op": "lt", "value": 0},
+      "threshold_origin": "draft",
+      "conflict_tolerance": 0
+    },
+    {
+      "id": "margins",
+      "claim": "Illustrative gross margin must remain at least 40%.",
+      "metric": "gross_margin",
+      "unit": "ratio",
+      "period": "2026Q3",
+      "source_ids": ["illustrative-local"],
+      "core": true,
+      "confirm": {"op": "gte", "value": 0.4},
+      "warning": {"op": "lt", "value": 0.35},
+      "kill": {"op": "lt", "value": 0.3},
+      "threshold_origin": "draft",
+      "conflict_tolerance": 0
+    }
+  ],
+  "valuation": {
+    "currency": "USD",
+    "as_of": "2026-10-23T12:00:00Z",
+    "hurdle_return": 0.15,
+    "max_loss_fraction": 0.35,
+    "scenarios": [
+      {"name": "bull", "probability": 0.25, "price": 150},
+      {"name": "base", "probability": 0.5, "price": 125},
+      {"name": "bear", "probability": 0.25, "price": 70}
+    ]
+  },
+  "position": {"current_weight": 0.02, "max_weight": 0.05},
+  "catalyst": {
+    "name": "Fictional next results: incremental information-value assumption only",
+    "due_at": "2026-11-01T12:00:00Z",
+    "information_value_per_share": 2,
+    "cost_per_share": 0.25,
+    "delay_cost_per_share": 0.5,
+    "threshold_origin": "draft"
+  }
+}

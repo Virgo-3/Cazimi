@@ -1,0 +1,47 @@
+{
+  "observations": [
+    {
+      "id": "illustrative-growth-2026q3",
+      "ticker": "DEMO",
+      "kind": "metric",
+      "as_of": "2026-10-23T12:00:00Z",
+      "metric": "revenue_growth",
+      "value": 0.12,
+      "unit": "ratio",
+      "period": "2026Q3",
+      "citation": "https://example.invalid/synthetic-fixture/growth",
+      "title": "Synthetic user assertion: quarterly revenue growth is 12%"
+    },
+    {
+      "id": "illustrative-margin-2026q3",
+      "ticker": "DEMO",
+      "kind": "metric",
+      "as_of": "2026-10-23T12:00:00Z",
+      "metric": "gross_margin",
+      "value": 0.42,
+      "unit": "ratio",
+      "period": "2026Q3",
+      "citation": "https://example.invalid/synthetic-fixture/margin",
+      "title": "Synthetic user assertion: gross margin is 42%"
+    },
+    {
+      "id": "illustrative-quote-20261023",
+      "ticker": "DEMO",
+      "kind": "price",
+      "as_of": "2026-10-23T12:00:00Z",
+      "value": 100,
+      "unit": "USD",
+      "citation": "https://example.invalid/synthetic-fixture/quote",
+      "title": "Synthetic user assertion: illustrative raw share price"
+    },
+    {
+      "id": "illustrative-document-20261023",
+      "ticker": "DEMO",
+      "kind": "document",
+      "as_of": "2026-10-23T12:00:00Z",
+      "value": null,
+      "citation": "https://example.invalid/synthetic-fixture/document",
+      "title": "Synthetic document review item; prose does not establish metric evidence"
+    }
+  ]
+}

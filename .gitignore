@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.dao/
+.cazimi/
+.env
+build/
+dist/
+.coverage
+.test-tmp/

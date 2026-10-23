@@ -1,0 +1,24 @@
+# Offline illustrative demonstration. Every assertion and signal is fictional.
+# Run in a fresh workspace: python -m dao --workspace .dao/demo-1 --script examples/decision.dao
+# This exports a local JSON decision record; it does not perform an outside action.
+/goal Save an approved decision record
+/rollback Use /receipts to find the local export, then /undo RECEIPT to remove its unchanged JSON file; preserve audit history and consumed credits.
+/support success illustrative-demo "Illustrative assertion only: the desired success criterion is a local approved decision record."
+/support risks illustrative-demo "Illustrative assertion only: the consequences of this local demonstration are acceptable."
+/support rollback illustrative-demo "Illustrative assertion only: the recovery procedure is understood; no external action is claimed."
+/economics probability=0.6 gain=100 loss=120 action_cost=0 observation_cost=5 delay_cost=2 signal_accuracy=0.8 observation_available=true
+/decide
+# Expected WAIT: act 12, wait 31.4, net information value 19.4.
+/observe positive illustrative-demo "Illustrative simulated positive signal, supplied by the user; no measurement was collected."
+/decide
+# Expected ACT: the posterior is 6/7; this permission covers only a local export.
+/act
+/receipts
+/branch counterexample
+/checkout counterexample
+/refute risks illustrative-demo "Illustrative counterexample only: suppose the risk acceptance assertion has failed."
+/decide
+# Expected REJECT: contradictory evidence invalidates the commitment on this branch.
+/diff main
+/verify
+/usage
